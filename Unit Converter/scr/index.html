@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h1>Unit Converter</h1>
+        <form id="converter-form">
+            <label for="input-value">Enter Value:</label>
+            <input type="number" id="input-value" placeholder="Enter a number" required>
+            
+            <label for="conversion-type">Select Conversion:</label>
+            <select id="conversion-type">
+                <option value="c-to-f">Celsius to Fahrenheit</option>
+                <option value="f-to-c">Fahrenheit to Celsius</option>
+                <option value="km-to-mi">Kilometers to Miles</option>
+                <option value="mi-to-km">Miles to Kilometers</option>
+                <option value="kg-to-lb">Kilograms to Pounds</option>
+                <option value="lb-to-kg">Pounds to Kilograms</option>
+            </select>
+            
+            <button type="button" id="convert-btn">Convert</button>
+            <button type="reset" id="reset-btn">Reset</button>
+        </form>
+        <div id="result-container">
+            <h2>Result:</h2>
+            <p id="result">--</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap'); 
+
+body {
+    font-family: 'SF Pro Display', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fdfcfb, #e2d1c3); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #4b4b4b; 
+}
+
+/* Converter Container */
+.converter-container {
+    background-color: #ffffff; 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #4b4b4b; 
+    animation: fadeIn 1s ease-in-out; 
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Header */
+h1 {
+    font-size: 2.5em;
+    color: #8b5e3c; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 500; 
+    text-align: left;
+    color: #4b4b4b; 
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #4b4b4b; 
+    background-color: #f9f5f0; 
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #c8a97e; 
+    box-shadow: 0 0 8px rgba(200, 169, 126, 0.5); 
+    transform: scale(1.02); 
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+#convert-btn {
+    background-color: #8b5e3c; 
+    color: white;
+}
+
+#convert-btn:hover {
+    background-color: #6f452a; 
+    transform: scale(1.05); 
+}
+
+#reset-btn {
+    background-color: #d97706; 
+    color: white;
+}
+
+#reset-btn:hover {
+    background-color: #b45309; 
+    transform: scale(1.05); 
+}
+
+/* Result Container */
+#result-container {
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #fdfcfb, #e2d1c3); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #4b4b4b; 
+    }
+    
+    /* App Container */
+    .app-container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+    
+    /* Input Container */
+    .input-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    #task-input, #task-timer {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+        font-size: 1em;
+        background-color: #f9f5f0;
+        color: #4b4b4b;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    
+    #task-input:focus, #task-timer:focus {
+        outline: none;
+        border-color: #c8a97e;
+        box-shadow: 0 0 8px rgba(200, 169, 126, 0.5);
+        transform: scale(1.02);
+    }
+    
+    button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    #add-task-btn {
+        background-color: #8b5e3c;
+        color: white;
+    }
+    
+    #add-task-btn:hover {
+        background-color: #6f452a;
+        transform: scale(1.05);
+    }
+    
+    #clear-all-btn {
+        background-color: #d97706;
+        color: white;
+        margin-top: 20px;
+        display: none;
+    }
+    
+    #clear-all-btn:hover {
+        background-color: #b45309;
+        transform: scale(1.05);
+    }
+    
+    /* Task List */
+    #task-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #task-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: #f9f5f0;
+        transition: transform 0.2s ease;
+    }
+    
+    #task-list li:hover {
+        transform: scale(1.02);
+    }
+    
+    .task-text {
+        flex: 1;
+        margin-right: 10px;
+        color: #4b4b4b;
+    }
+    
+    .task-timer {
+        font-size: 0.9em;
+        color: #8b5e3c;
+        margin-right: 10px;
+    }
+    
+    .delete-btn {
+        background-color: #ef4444;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .delete-btn:hover {
+        background-color: #dc2626;
+    }top: 20px;
+    text-align: center;
+}
+
+#result-container h2 {
+    font-size: 1.5em;
+    color: #8b5e3c; 
+}
+
+#result {
+    font-size: 1.2em;
+    color: #4b4b4b; 
+    margin-top: 10px;
+    background-color: #f9f5f0; 
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+#result:hover {
+    transform: scale(1.05); 
+}
